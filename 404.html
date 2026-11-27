@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" style="background-color: #001F42; color: #FFFFFF;">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var loc = window.location;
+        if (loc.hash && loc.hash !== '#') return;
+        var match = /^(.*?)\/(stand|winners|simulate)(?:\/index\.html|\/)?$/.exec(loc.pathname);
+        if (!match) return;
+        var basePath = (match[1] || '').replace(/\/+/g, '/').replace(/\/+$/, '');
+        loc.replace(loc.origin + basePath + '/#/' + match[2] + (loc.search || ''));
+      })();
+    </script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#001F42" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./assets/logo-DeG21ZbU.svg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rye&family=Roboto+Slab:wght@400;700;900&family=JetBrains+Mono:wght@500;700&family=Special+Elite&display=swap"
+    />
+    <title>JYSK Tech Trivia Duel &amp; Live Prize Wheel</title>
+    <script type="module" crossorigin src="./assets/index-BVBC97fv.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C8Zl2exr.css">
+  </head>
+  <body class="bg-jysk-midnight text-jysk-white antialiased selection:bg-jysk-cyan selection:text-jysk-midnight" style="background-color: #001F42; color: #FFFFFF;">
+    <div id="root"></div>
+  </body>
+</html>
